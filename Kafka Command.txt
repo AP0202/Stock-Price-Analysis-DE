@@ -1,0 +1,17 @@
+Kafka commands
+
+start zookeeper- <kafka server directory>.\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
+stop zookeeper - <kafka server directory>.\bin\windows\zookeeper-server-stop.bat .\config\zookeeper.properties
+
+start kafka server -  <kafka server directory>.\bin\windows\kafka-server-start.bat .\config\server.properties
+stop kafka server - <kafka server directory>.\bin\windows\kafka-server-stop.bat .\config\server.properties
+
+kafka topics creation - <kafka server directory>.\bin\windows\kafka-topics.bat --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic test
+
+start producer - <kafka server bin\windows directory>kafka-console-producer.bat --bootstrap-server localhost:9092 --topic <topic name>
+
+start consumer - <kafka server bin\windows directory>kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic <topic name>
+
+
+kafka topics list - <kafka server directory>.\bin\windows\kafka-topics.bat --bootstrap-server=localhost:9092 --list
+kafka topics deletion - <kafka server directory>.\bin\windows\kafka-topics.bat --bootstrap-server localhost:9092 --delete --topic <topic name>
